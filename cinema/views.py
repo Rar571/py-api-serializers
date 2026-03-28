@@ -22,7 +22,7 @@ class ActorViewSet(viewsets.ModelViewSet):
 
 class MovieViewSet(viewsets.ModelViewSet):
     queryset = Movie.objects
-    serializer_class = MovieListSerializer
+    serializer_class = MovieSerializer
 
     def get_serializer_class(self) -> type[MovieListSerializer | MovieRetrieveSerializer | MovieSerializer]:
         if self.action == "list":
